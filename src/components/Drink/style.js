@@ -6,8 +6,7 @@ const Container_Drink = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  border: 2px solid pink;
-  width: 300px;
+  max-width: 300px;
   img {
     width: 100px;
     height: 200px;

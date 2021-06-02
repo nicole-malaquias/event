@@ -5,9 +5,14 @@ const Container_Home = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  width: 100vw;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   div + div {
-    margin: 10px;
+    margin: 0 auto;
+  }
+  div {
+    margin: 0 auto;
   }
   h1 {
     text-align: center;
