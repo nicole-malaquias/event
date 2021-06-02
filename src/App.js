@@ -1,10 +1,16 @@
 import "./App.css";
 
+import { Route } from "react-router";
+import Router from "./routes";
+import { CatalogueProvider, CatalogueContext } from "./providers/catalogue";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <>
+      <CatalogueProvider>
+        <Router />
+      </CatalogueProvider>
+    </>
   );
 }
 

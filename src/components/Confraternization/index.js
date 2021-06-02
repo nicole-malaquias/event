@@ -1,5 +1,12 @@
+import Menu from "../Menu";
+
 const Confraternization = () => {
-  return;
+  return (
+    <>
+      <Menu />
+      <h1>Confraternization</h1>
+    </>
+  );
 };
 
 export default Confraternization;
