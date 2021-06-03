@@ -18,6 +18,7 @@ const Container_Home = styled.div`
     text-align: center;
     width: 100%;
     flex: 2 1 auto;
+    color: #1b263b;
   }
 `;
 export default Container_Home;
