@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Container_Graduation = styled.div`
+const Container_Wedding = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -21,4 +21,4 @@ const Container_Graduation = styled.div`
     color: #1b263b;
   }
 `;
-export default Container_Graduation;
+export default Container_Wedding;

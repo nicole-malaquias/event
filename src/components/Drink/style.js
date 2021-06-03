@@ -26,6 +26,11 @@ const Container_Drink = styled.div`
     border: 1px solid #1b263b;
     font-weight: bolder;
   }
+  input {
+    text-align: center;
+    width: 70%;
+    height: 25px;
+  }
 
   button:active {
     background: #1b263b;
