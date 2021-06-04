@@ -5,7 +5,7 @@ import { ConfraternizacaoContext } from "../../providers/confraternizacao";
 import { GraduationContext } from "../../providers/graduation";
 import { WeddingContext } from "../../providers/wedding";
 
-const Drink = ({ item, btn }) => {
+const Drink = ({ item, btn, typeParty }) => {
   const [type, setType] = useState("");
   const { name, tagline, image_url } = item;
   const { handleStockCAdd, handleStockCSub } = useContext(
@@ -15,22 +15,21 @@ const Drink = ({ item, btn }) => {
   const { handleStockWAdd, handleStockWSub } = useContext(WeddingContext);
 
   const handleSubtmit = (func) => {
-    if (type === "graduation") {
+    if (type === "graduation" || typeParty === "graduation") {
       if (func === "ADD") {
         handleStockGAdd(item);
-        console.log("chegou add");
       } else {
         handleStockGSub(item.id);
       }
     }
-    if (type === "wedding") {
+    if (type === "wedding" || typeParty === "wedding") {
       if (func === "ADD") {
         handleStockWAdd(item);
       } else {
         handleStockWSub(item.id);
       }
     }
-    if (type === "Happy") {
+    if (type === "Happy" || typeParty === "Happy") {
       if (func === "ADD") {
         handleStockCAdd(item);
       } else {
@@ -46,11 +45,13 @@ const Drink = ({ item, btn }) => {
       <br></br>
       <span>{tagline}</span>
       <img src={image_url} />
-      <input
-        placeholder="Tipo do Evento"
-        value={type}
-        onChange={(e) => setType(e.target.value)}
-      />
+      {btn === "ADD" && (
+        <input
+          placeholder="Tipo do Evento"
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+        />
+      )}
       {btn === "ADD" ? (
         <button onClick={() => handleSubtmit("ADD")}> ADD</button>
       ) : (

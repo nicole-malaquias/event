@@ -9,7 +9,7 @@ export const GraduationProvider = ({ children }) => {
     const id = stock.length !== 0 ? stock[stock.length - 1].id + 1 : 1;
     drink.id = id;
     setStock([...stock, drink]);
-    console.log(stock);
+    console.log("olha o que adicionou", stock);
   };
   const handleStockGSub = (id) => {
     const list = stock.filter((item) => item.id !== id);

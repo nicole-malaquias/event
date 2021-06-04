@@ -15,7 +15,7 @@ const Menu = () => {
         <h3>Home</h3>
       </div>
       <div className="item-menu" onClick={() => sendTo("/Confraternization")}>
-        <h3>Confraternization</h3>
+        <h3>Happy Hour</h3>
       </div>
       <div className="item-menu" onClick={() => sendTo("/Graduation")}>
         <h3>Graduation</h3>
