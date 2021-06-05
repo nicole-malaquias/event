@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Container_Drink = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -25,17 +26,20 @@ const Container_Drink = styled.div`
     background: none;
     border: 1px solid #1b263b;
     font-weight: bolder;
+    cursor: pointer;
   }
   input {
     text-align: center;
     width: 70%;
     height: 25px;
+    cursor: pointer;
   }
   select {
     background: none;
     border: none;
     height: 30px;
     width: 70%;
+    cursor: pointer;
     border-bottom: 1px solid black;
   }
 
