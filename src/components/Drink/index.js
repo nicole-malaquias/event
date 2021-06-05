@@ -15,21 +15,23 @@ const Drink = ({ item, btn, typeParty }) => {
   const { handleStockWAdd, handleStockWSub } = useContext(WeddingContext);
 
   const handleSubtmit = (func) => {
-    if (type === "graduation" || typeParty === "graduation") {
+    if (type === "GRADUATION" || typeParty === "GRADUATION") {
       if (func === "ADD") {
         handleStockGAdd(item);
       } else {
         handleStockGSub(item.id);
       }
     }
-    if (type === "wedding" || typeParty === "wedding") {
+    if (type === "WEDDING" || typeParty === "WEDDING") {
+      console.log("entrou?");
       if (func === "ADD") {
         handleStockWAdd(item);
       } else {
+        console.log("tentou remover");
         handleStockWSub(item.id);
       }
     }
-    if (type === "Happy" || typeParty === "Happy") {
+    if (type === "HAPPY" || typeParty === "HAPPY") {
       if (func === "ADD") {
         handleStockCAdd(item);
       } else {
@@ -38,7 +40,11 @@ const Drink = ({ item, btn, typeParty }) => {
     }
     setType("");
   };
-
+  const handleSelect = () => {
+    var select = document.getElementById(item.id);
+    var value = select.options[select.selectedIndex].value;
+    setType(value);
+  };
   return (
     <Container_Drink>
       <h4>{name}</h4>
@@ -46,12 +52,17 @@ const Drink = ({ item, btn, typeParty }) => {
       <span>{tagline}</span>
       <img src={image_url} />
       {btn === "ADD" && (
-        <input
-          placeholder="Tipo do Evento"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        />
+        <>
+          <label for="party">Choose a Party:</label>
+          <select id={item.id} onChange={handleSelect}>
+            <option value="types">Types</option>
+            <option value="GRADUATION">GRADUATION</option>
+            <option value="WEDDING">WEDDING</option>
+            <option value="HAPPY">HAPPY</option>
+          </select>
+        </>
       )}
+
       {btn === "ADD" ? (
         <button onClick={() => handleSubtmit("ADD")}> ADD</button>
       ) : (

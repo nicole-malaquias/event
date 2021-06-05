@@ -20,12 +20,12 @@ const Confraternization = () => {
           <Slider>
             {stock.map((item, index) => (
               <div key={index}>
-                <Drink item={item} typeParty={"Happy"} />
+                <Drink item={item} typeParty={"HAPPY"} />
               </div>
             ))}
           </Slider>
         ) : (
-          stock.map((item, index) => <Drink item={item} typeParty={"Happy"} />)
+          stock.map((item, index) => <Drink item={item} typeParty={"HAPPY"} />)
         )}
       </Container_Confra>
     </>

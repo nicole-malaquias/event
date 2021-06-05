@@ -20,13 +20,13 @@ const Graduation = () => {
           <Slider>
             {stock.map((item, index) => (
               <div key={index}>
-                <Drink item={item} typeParty={"graduation"} />
+                <Drink item={item} typeParty={"GRADUATION"} />
               </div>
             ))}
           </Slider>
         ) : (
           stock.map((item, index) => (
-            <Drink item={item} typeParty={"graduation"} />
+            <Drink item={item} typeParty={"GRADUATION"} />
           ))
         )}
       </Container_Graduation>
