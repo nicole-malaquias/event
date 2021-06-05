@@ -31,6 +31,13 @@ const Container_Drink = styled.div`
     width: 70%;
     height: 25px;
   }
+  select {
+    background: none;
+    border: none;
+    height: 30px;
+    width: 70%;
+    border-bottom: 1px solid black;
+  }
 
   button:active {
     background: #1b263b;

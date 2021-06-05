@@ -53,7 +53,6 @@ const Drink = ({ item, btn, typeParty }) => {
       <img src={image_url} />
       {btn === "ADD" && (
         <>
-          <label for="party">Choose a Party:</label>
           <select id={item.id} onChange={handleSelect}>
             <option value="types">Types</option>
             <option value="GRADUATION">GRADUATION</option>
